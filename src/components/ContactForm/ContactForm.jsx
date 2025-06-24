@@ -23,7 +23,10 @@ const ContactForm = () => {
   });
 
   const handleSubmit = (values, actions) => {
-    dispatch(addContact({ name: values.name.trim(), number: values.number.trim() }));
+    dispatch(addContact({
+      name: values.name.trim(),
+      number: values.number.trim(),
+    }));
     actions.resetForm();
   };
 
